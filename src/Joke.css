@@ -1,0 +1,68 @@
+.Joke {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Joke .votes {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 15%;
+	border-right: peachpuff 2px dotted;
+}
+
+.Joke .votes .number-votes {
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 0.75rem;
+	font-weight: 300;
+	border: 3px solid red;
+	box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Joke .votes #upvote {
+	color: green;
+	padding: 0.5rem;
+}
+
+.Joke .votes #downvote {
+	color: red;
+	padding: 0.5rem;
+}
+
+.Joke .votes #upvote:hover,
+.Joke .votes #downvote:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.Joke .joke {
+	width: 75%;
+	text-align: justify;
+	font-size: 1.2rem;
+	margin: auto 0.5rem;
+}
+.Joke .reaction {
+	width: 10%;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+@media (max-width: 762px) {
+	.Joke {
+		flex-direction: column;
+	}
+	.Joke .votes {
+		width: 100%;
+		margin: 0.5rem 0;
+		border-right: none;
+	}
+	.Joke .votes .number-votes {
+		border-radius: 0;
+	}
+}
